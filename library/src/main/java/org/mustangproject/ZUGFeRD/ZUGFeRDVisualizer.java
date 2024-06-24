@@ -262,12 +262,11 @@ public class ZUGFeRDVisualizer {
 		String expected = null;
 		String result = null;
 
-		ZUGFeRDVisualizer zvi = new ZUGFeRDVisualizer();
 			/* remove file endings so that tests can also pass after checking
 			   out from git with arbitrary options (which may include CSRF changes)
 			 */
 		try {
-			result = zvi.toFOP(CIIinputFile.getAbsolutePath());
+			result = toFOP(CIIinputFile.getAbsolutePath());
 		} catch (FileNotFoundException e) {
 			Logger.getLogger(ZUGFeRDVisualizer.class.getName()).log(Level.SEVERE, null, e);
 		} catch (TransformerException e) {
